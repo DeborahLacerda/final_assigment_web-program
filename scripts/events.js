@@ -38,22 +38,6 @@ document.querySelector("#date").addEventListener("blur", function () {
     dateError.textContent = "";
   }
 });
-document.querySelector("#color").addEventListener("blur", function () {
-  const cor = document.getElementById("color");
-  const value = cor.value;
-  const a = value;
-  if (a.value !== "") {
-    colorError.textContent = "";
-  }
-});
-
-document.querySelector("#other").addEventListener("blur", function () {
-  const ocor = document.getElementById("other");
-  console.log(ocor.value);
-  if (ocor.value !== "") {
-    colorError.textContent = "";
-  }
-});
 
 //call the funtion validateProfile
 
@@ -62,3 +46,11 @@ document.profile.addEventListener("submit", validateProfile);
 //call the funtion clearAll
 
 document.profile.addEventListener("reset", clearAll);
+
+/// any change
+
+document.profile.addEventListener("change", validateEye);
+document.profile.addEventListener("change", validateDate);
+document.profile.addEventListener("change", validateColor);
+document.profile.addEventListener("change", validateDName);
+document.profile.addEventListener("change", validateSize);

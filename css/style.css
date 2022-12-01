@@ -41,5 +41,4 @@
 }
 .errorMessage {
   color: var(--red);
-  font-size: var(--fontSize);
 }

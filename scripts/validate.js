@@ -7,12 +7,13 @@ function validateProfile(e) {
   var valid = true;
 
   //duckName
-  valid &= validatedname();
+  valid &= validateDName();
   //size
-  valid &= validatesize();
+  valid &= validateSize();
 
   validateDate();
-  validatecolor();
+  validateColor();
+  validateEye();
   if (valid == false) {
     return false;
   }
@@ -26,20 +27,20 @@ function validateProfile(e) {
 
 ///a) Text (min and max length)
 
-function validatedname() {
+function validateDName() {
   const textbox = document.getElementById("dname");
   if (textbox.value.length <= 10 && textbox.value.length >= 5) {
   } else if (dname.value === "") {
     document.querySelector("#dnameError").textContent =
       "*Please make sure the Name is between 5-10 characters long*";
-  } else {
-    document.querySelector("#dnameError").textContent =
-      "*Please make sure the Name is between 5-10 characters long*";
   }
+  document.querySelector("#dnameError").textContent =
+    "*Please make sure the Name is between 5-10 characters long*";
 }
+
 ///b) Number (min and max of your choice)
 
-function validatesize() {
+function validateSize() {
   const textbox = document.getElementById("size");
   if (textbox.value <= 10 && textbox.value >= 5) {
   } else if (size.value === "") {
@@ -76,30 +77,42 @@ function validateDate() {
   } else if (day.value === "") {
     document.querySelector("#dateError").textContent =
       "*Please make sure the input is date after 29-Nov-2022*";
+  } else {
+    document.querySelector("#dateError").textContent = "";
   }
 }
+
 ///d) A List that allows editing input and single selection (Required)
 
-// let text = document.getElementById("color").nextElementSibling.onchange;
-// nextElementSibling.value = value;
-
-function validatecolor() {
-  const cor = document.getElementById("color");
-  const value = cor.value;
-  const a = value;
-  const ocor = document.getElementById("other");
-  if (a.value === "") {
+function validateColor() {
+  var ccolor = document.getElementById("color").value;
+  if (ccolor === "") {
     document.querySelector("#colorError").textContent =
-      "*Please choose or write the color.*";
-  } else if (ocor.value === "") {
-    document.querySelector("#colorError").textContent =
-      "*Please choose or write the color.*";
+      "*Please make sure the input the color*";
+  } else {
+    document.querySelector("#colorError").textContent = "";
   }
 }
+
+//check radio was check
+
+function validateEye() {
+  var eyes = document.profile.eyes.value; // chech is this has value or not
+  if (eyes === "") {
+    document.querySelector("#eyesError").textContent =
+      "*Please make sure the input the color*";
+  } else {
+    document.querySelector("#eyesError").textContent = "";
+  }
+}
+
+const elements1 = document.querySelectorAll('[name="eyes"]');
+console.log(elements1);
 
 function clearAll(e) {
   document.querySelector("#dnameError").textContent = "";
   document.querySelector("#sizeError").textContent = "";
   document.querySelector("#dateError").textContent = "";
   document.querySelector("#colorError").textContent = "";
+  document.querySelector("#eyesError").textContent = "";
 }

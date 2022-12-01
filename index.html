@@ -13,8 +13,9 @@
 
   <body>
     <header>Form</header>
+    <p>Required fields are followed by <span aria-label="required">*</span>.</p>
     <main>
-      <form name="profile">
+      <form name="profile" id="profileForm">
         <div class="inputField">
           <label for="dname">duckname</label>
           <input tabindex="1" type="text" id="dname" name="dname" value="" />
@@ -31,98 +32,47 @@
           <input tabindex="2" type="date" id="date" name="date" value="" />
           <span class="errorMessage" id="dateError"></span>
         </div>
+
         <div>
-          <label for="color">Color</label>
-          <div class="select-editable">
-            <select
-              onchange="this.nextElementSibling.value=this.value"
-              tabindex="3"
-              id="color"
-            >
-              <option value=""></option>
-              <option value="pink">pink</option>
-              <option value="blue">blue</option>
-              <option value="green">green</option>
-              <option value="yellow">yellow</option>
-            </select>
-            <input type="text" id="other" name="dname" value="" />
-          </div>
+          <label for="username"
+            >Color: <span aria-label="required">*</span></label
+          >
+          <input type="text" id="color" list="colours" />
+          <datalist id="colours">
+            <option value="Red" data-id="1"></option>
+            <option value="Blue" data-id="2"></option>
+            <option value="Green" data-id="3"></option>
+            <option value="Black" data-id="4"></option>
+            <option value="White" data-id="5"></option>
+          </datalist>
+        </div>
+        <div>
+          <span class="errorMessage" id="colorError"></span>
+        </div>
+
+        <div>
+          <legend>Duck Eyes <span aria-label="required">*</span></legend>
+          <label for="lashes"
+            ><input type="radio" name="eyes" id="lashes" value="lashes" />With
+            lashes
+          </label>
+          <label for="nlashes"
+            ><input
+              type="radio"
+              name="eyes"
+              id="nlashes"
+              value="noLashes"
+            />Without lashes</label
+          >
+          <label for="stress"
+            ><input type="radio" name="eyes" id="stress" value="stress" />Pop
+            Out Stress</label
+          >
           <div>
-            <span class="errorMessage" id="colorError"></span>
+            <span class="errorMessage" id="eyesError"></span>
           </div>
         </div>
-        <!--...
-        <div>
-          <label for="color">Color</label>
-          <select tabindex="3" id="Color">
-            <option value=""></option>
-            <option value="pink">pink</option>
-            <option value="blue">blue</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option><input type="text" /></option>
-          </select>
-             <div>
-            <span class="errorMessage" id="colorError"></span>
-          </div>
-        </div>
- -->
-        <!--...
-        <div>
-          <label for="color">Color</label>
-          <input list="Color-list" tabindex="3" id="Color" />
-          <datalist id="Color-list">
-            <option value="pink">pink</option>
-            <option value="blue">blue</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            </datalist>
-          <input type="text" /></option>
-        </div>
-           <div>
-            <span class="errorMessage" id="colorError"></span>
-          </div>
-        -->
-        <div>
-          <input tabindex="4" type="checkbox" id="gift" name="gift" />
-          <label for="gift">gift packaging </label>
-        </div>
-        <section tabindex="5">
-          <legend>Face of Duck</legend>
-          <div>
-            <div>
-              <input
-                type="radio"
-                name="catTemperament"
-                id="catTemperament-friendly"
-                value="friendly"
-              />
-              <label for="catTemperament-friendly"> Friendly </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="catTemperament"
-                id="catTemperament-sleepy"
-                value="sleepy"
-                checked
-              />
-              <label for="catTemperament-sleepy">Sleepy </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="catTemperament"
-                id="catTemperament-independent"
-                value="independent"
-              />
-              <label for="catTemperament-independent"> Independent </label>
-            </div>
-            <div>
-              <span class="errorMessage" id="inputTerrirotialError"></span>
-            </div>
-          </div>
-        </section>
+
         <input class="btn" type="submit" value="Submit" />
         <input class="btn" type="reset" />
       </form>
