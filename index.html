@@ -51,6 +51,78 @@
             <span class="errorMessage" id="colorError"></span>
           </div>
         </div>
+        <!--...
+        <div>
+          <label for="color">Color</label>
+          <select tabindex="3" id="Color">
+            <option value=""></option>
+            <option value="pink">pink</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option><input type="text" /></option>
+          </select>
+             <div>
+            <span class="errorMessage" id="colorError"></span>
+          </div>
+        </div>
+ -->
+        <!--...
+        <div>
+          <label for="color">Color</label>
+          <input list="Color-list" tabindex="3" id="Color" />
+          <datalist id="Color-list">
+            <option value="pink">pink</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            </datalist>
+          <input type="text" /></option>
+        </div>
+           <div>
+            <span class="errorMessage" id="colorError"></span>
+          </div>
+        -->
+        <div>
+          <input tabindex="4" type="checkbox" id="gift" name="gift" />
+          <label for="gift">gift packaging </label>
+        </div>
+        <section tabindex="5">
+          <legend>Face of Duck</legend>
+          <div>
+            <div>
+              <input
+                type="radio"
+                name="catTemperament"
+                id="catTemperament-friendly"
+                value="friendly"
+              />
+              <label for="catTemperament-friendly"> Friendly </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="catTemperament"
+                id="catTemperament-sleepy"
+                value="sleepy"
+                checked
+              />
+              <label for="catTemperament-sleepy">Sleepy </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="catTemperament"
+                id="catTemperament-independent"
+                value="independent"
+              />
+              <label for="catTemperament-independent"> Independent </label>
+            </div>
+            <div>
+              <span class="errorMessage" id="inputTerrirotialError"></span>
+            </div>
+          </div>
+        </section>
         <input class="btn" type="submit" value="Submit" />
         <input class="btn" type="reset" />
       </form>
