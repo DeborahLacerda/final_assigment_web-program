@@ -1,0 +1,45 @@
+:root {
+  --blue: #133854;
+  --grey: #707070;
+  --lightGrey: #818181;
+  --white: #ffffff;
+  --red: #5d0909;
+}
+
+.select-editable {
+  position: relative;
+  background-color: white;
+  border: solid grey 1px;
+  width: 120px;
+  height: 18px;
+}
+.select-editable select {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 14px;
+  border: none;
+  width: 120px;
+  margin: 0;
+}
+.select-editable input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  padding: 1px;
+  font-size: 12px;
+  border: none;
+}
+.select-editable select:focus,
+.select-editable input:focus {
+  outline: none;
+}
+
+.btn {
+  margin: 23px 23px 23px 23px;
+}
+.errorMessage {
+  color: var(--red);
+  font-size: var(--fontSize);
+}

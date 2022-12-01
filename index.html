@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Deborah Lacerda" />
+    <meta name="email" content="lace0115@algonquinlive.com" />
+
+    <title>Form</title>
+
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>Form</header>
+    <main>
+      <form name="profile">
+        <div class="inputField">
+          <label for="dname">duckname</label>
+          <input tabindex="1" type="text" id="dname" name="dname" value="" />
+          <span class="errorMessage" id="dnameError"></span>
+        </div>
+
+        <div>
+          <label for="size">size</label>
+          <input tabindex="2" type="number" id="size" name="size" value="" />
+          <span class="errorMessage" id="sizeError"></span>
+        </div>
+        <div>
+          <label for="date">date</label>
+          <input tabindex="2" type="date" id="date" name="date" value="" />
+          <span class="errorMessage" id="dateError"></span>
+        </div>
+        <div>
+          <label for="color">Color</label>
+          <div class="select-editable">
+            <select
+              onchange="this.nextElementSibling.value=this.value"
+              tabindex="3"
+              id="color"
+            >
+              <option value=""></option>
+              <option value="pink">pink</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
+              <option value="yellow">yellow</option>
+            </select>
+            <input type="text" id="other" name="dname" value="" />
+          </div>
+          <div>
+            <span class="errorMessage" id="colorError"></span>
+          </div>
+        </div>
+        <input class="btn" type="submit" value="Submit" />
+        <input class="btn" type="reset" />
+      </form>
+    </main>
+    <script src="/scripts/validate.js" defer></script>
+    <script src="/scripts/events.js" defer></script>
+  </body>
+</html>
