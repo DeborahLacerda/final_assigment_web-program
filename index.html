@@ -13,71 +13,97 @@
 
   <body>
     <header>Form</header>
-    <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+    <p>This are the Ducks</p>
+    <p>
+      How about a special duck? Choose the main features. Required fields are
+      followed by <span aria-label="required">*</span>.
+    </p>
     <main>
       <form name="profile" id="profileForm">
-        <div class="inputField">
-          <label for="dname">duckname</label>
-          <input tabindex="1" type="text" id="dname" name="dname" value="" />
-          <span class="errorMessage" id="dnameError"></span>
-        </div>
+        <fieldset>
+          <legend>Special Ducks:</legend>
 
-        <div>
-          <label for="size">size</label>
-          <input tabindex="2" type="number" id="size" name="size" value="" />
-          <span class="errorMessage" id="sizeError"></span>
-        </div>
-        <div>
-          <label for="date">date</label>
-          <input tabindex="2" type="date" id="date" name="date" value="" />
-          <span class="errorMessage" id="dateError"></span>
-        </div>
-
-        <div>
-          <label for="username"
-            >Color: <span aria-label="required">*</span></label
-          >
-          <input type="text" id="color" list="colours" />
-          <datalist id="colours">
-            <option value="Red" data-id="1"></option>
-            <option value="Blue" data-id="2"></option>
-            <option value="Green" data-id="3"></option>
-            <option value="Black" data-id="4"></option>
-            <option value="White" data-id="5"></option>
-          </datalist>
-        </div>
-        <div>
-          <span class="errorMessage" id="colorError"></span>
-        </div>
-
-        <div>
-          <legend>Duck Eyes <span aria-label="required">*</span></legend>
-          <label for="lashes"
-            ><input type="radio" name="eyes" id="lashes" value="lashes" />With
-            lashes
-          </label>
-          <label for="nlashes"
-            ><input
-              type="radio"
-              name="eyes"
-              id="nlashes"
-              value="noLashes"
-            />Without lashes</label
-          >
-          <label for="stress"
-            ><input type="radio" name="eyes" id="stress" value="stress" />Pop
-            Out Stress</label
-          >
           <div>
-            <span class="errorMessage" id="eyesError"></span>
+            <label for="dname">Duck Name</label>
+            <input tabindex="1" type="text" id="dname" name="dname" value="" />
+            <span class="errorMessage" id="dnameError"></span>
           </div>
-        </div>
+
+          <div>
+            <label for="quantity">Minimum quantity 5 and maximum 10</label>
+            <input
+              tabindex="2"
+              type="number"
+              id="quantity"
+              name="quantity"
+              value=""
+            />
+            <span class="errorMessage" id="quantityError"></span>
+          </div>
+          <div>
+            <label for="date">Pick-up date</label>
+            <input tabindex="2" type="date" id="date" name="date" value="" />
+            <span class="errorMessage" id="dateError"></span>
+          </div>
+
+          <div>
+            <label for="username"
+              >Color: <span aria-label="required">*</span></label
+            >
+            <input type="text" id="color" list="colours" />
+            <datalist id="colours">
+              <option value="Yellow" data-id="1"></option>
+              <option value="Blue" data-id="2"></option>
+              <option value="Green" data-id="3"></option>
+              <option value="Black" data-id="4"></option>
+              <option value="White" data-id="5"></option>
+            </datalist>
+          </div>
+          <div>
+            <span class="errorMessage" id="colorError"></span>
+          </div>
+
+          <div>
+            <legend>Duck Eyes <span aria-label="required">*</span></legend>
+            <label for="lashes"
+              ><input type="radio" name="eyes" id="lashes" value="lashes" />With
+              lashes
+            </label>
+            <label for="nlashes"
+              ><input
+                type="radio"
+                name="eyes"
+                id="nlashes"
+                value="noLashes"
+              />Without lashes</label
+            >
+            <label for="stress"
+              ><input type="radio" name="eyes" id="stress" value="stress" />Pop
+              Out Stress</label
+            >
+            <div>
+              <span class="errorMessage" id="eyesError"></span>
+            </div>
+          </div>
+        </fieldset>
+        <label>Your total</label>
+
+        <input type="number" readonly class="display" value="0" id="total" />
 
         <input class="btn" type="submit" value="Submit" />
         <input class="btn" type="reset" />
       </form>
+
+      <section class="top"></section>
+
+      <section class="container"></section>
     </main>
-    <script src="/scripts/validate.js" defer></script>
-    <script src="/scripts/events.js" defer></script>
+    <script src="/scripts/validate.js"></script>
+    <script src="/scripts/events.js"></script>
+    <script src="scripts/request.js"></script>
+
+    <!--https://amsterdamduckstore.com/rubber-ducks/christmas-gifts-duckies/-->
+
+    <!--https://www.freepik.com/free-photos-vectors/duck-pattern-->
   </body>
 </html>

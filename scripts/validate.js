@@ -4,25 +4,15 @@
 //validate module
 function validateProfile(e) {
   e.preventDefault();
-  var valid = true;
 
   //duckName
-  valid &= validateDName();
+  validateDName();
   //size
-  valid &= validateSize();
+  validateQuantity();
 
   validateDate();
   validateColor();
   validateEye();
-  if (valid == false) {
-    return false;
-  }
-  //Alert if form is valid and return true.
-
-  if (valid) {
-    alert("Thank you");
-  }
-  return true;
 }
 
 ///a) Text (min and max length)
@@ -40,15 +30,15 @@ function validateDName() {
 
 ///b) Number (min and max of your choice)
 
-function validateSize() {
-  const textbox = document.getElementById("size");
+function validateQuantity() {
+  const textbox = document.getElementById("quantity");
   if (textbox.value <= 10 && textbox.value >= 5) {
-  } else if (size.value === "") {
-    document.querySelector("#sizeError").textContent =
-      "*Please enter a size between 10 and 5.*";
+  } else if (quantity.value === "") {
+    document.querySelector("#quantityError").textContent =
+      "*Please enter a quantity between 5 and 10.*";
   } else {
-    document.querySelector("#sizeError").textContent =
-      "*Please enter a size between 10 and 5.*";
+    document.querySelector("#quantityError").textContent =
+      "*Please enter a quantity between 5 and 10.*";
   }
 }
 
@@ -111,7 +101,7 @@ console.log(elements1);
 
 function clearAll(e) {
   document.querySelector("#dnameError").textContent = "";
-  document.querySelector("#sizeError").textContent = "";
+  document.querySelector("#quantityError").textContent = "";
   document.querySelector("#dateError").textContent = "";
   document.querySelector("#colorError").textContent = "";
   document.querySelector("#eyesError").textContent = "";

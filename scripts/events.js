@@ -14,10 +14,10 @@ document.querySelector("#dname").addEventListener("blur", function () {
 });
 
 //remove warning if age has input
-document.querySelector("#size").addEventListener("blur", function () {
-  const textbox = document.getElementById("size");
+document.querySelector("#quantity").addEventListener("blur", function () {
+  const textbox = document.getElementById("quantity");
   if (textbox.value <= 10 && textbox.value >= 5) {
-    sizeError.textContent = "";
+    quantityError.textContent = "";
   }
 });
 
@@ -53,4 +53,4 @@ document.profile.addEventListener("change", validateEye);
 document.profile.addEventListener("change", validateDate);
 document.profile.addEventListener("change", validateColor);
 document.profile.addEventListener("change", validateDName);
-document.profile.addEventListener("change", validateSize);
+document.profile.addEventListener("change", validateQuantity);

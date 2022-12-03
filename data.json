@@ -1,0 +1,55 @@
+{
+    "DuckName": "Trending Ducks",
+    "active": true,
+    "members": [
+        {
+            "id": 1,
+            "name": "Barista",
+            "value": 30.00,
+            "img": "/images/Barista-Rubber-Duck-front-400x400.jpg",
+            "color": "Yellow",
+            "size": "P"
+        },
+        {
+            "id": 2,
+            "name": "Fitness",
+            "value": 20.00,
+            "img": "/images/Fitness-Rubber-Duck-front-Amsterdam-Duck-Store-2-400x400.jpg",
+            "color": "Yellow",
+            "eyes": "nlashes",
+            "size": "P"
+        },
+        {
+            "id": 3,
+            "name": "Gamer-girl",
+            "value": 25.00,
+            "img": "/images/gamer-girl-rubber-duck-front-amsterdam-duck-store--400x400.jpg",
+            "color": "Yellow",
+            "size": "P"
+        },
+        {
+            "id": 4,
+            "name": "Gamer-boy",
+            "value": 25.00,
+            "img": "/images/Gamer-Rubber-Duck-front-400x400.jpg",
+            "color": "Black",
+            "size": "P"
+        },
+        {
+            "id": 5,
+            "name": "Santa",
+            "value": 40.00,
+            "img": "/images/Santa-rubber-duck-front-e1569516717973-400x400.jpg",
+            "color": "Yellow",
+            "size": "P"
+        },
+        {
+            "id": 6,
+            "name": "X-mas-tree",
+            "value": 45.00,
+            "img": "/images/X-mas-tree-rubber-duck-front-e1569516425516-400x400.jpg",
+            "color": "Yellow",
+            "size": "P"
+        }
+    ]
+}

@@ -1,39 +1,31 @@
-:root {
-  --blue: #133854;
-  --grey: #707070;
-  --lightGrey: #818181;
-  --white: #ffffff;
-  --red: #5d0909;
+main {
+  font-size: 1.1rem;
 }
-
-.select-editable {
-  position: relative;
-  background-color: white;
-  border: solid grey 1px;
-  width: 120px;
-  height: 18px;
+fieldset {
+  background-image: url(/images/rubber-duck-pattern_53876-67666.webp);
 }
-.select-editable select {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-size: 14px;
+input {
+  background-color: rgb(244, 230, 168);
+  font-size: 1.1rem;
+}
+label {
+  font-size: 1.1rem;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type="submit"],
+[type="reset"] {
+  background-color: #f3eb0b;
+  color: rgb(53, 39, 20);
+  padding: 12px 20px;
   border: none;
-  width: 120px;
-  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
 }
-.select-editable input {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100px;
-  padding: 1px;
-  font-size: 12px;
-  border: none;
-}
-.select-editable select:focus,
-.select-editable input:focus {
-  outline: none;
+input[type="submit"]:hover,
+[type="reset"]:hover {
+  background-color: #dfd7a0;
 }
 
 .btn {
@@ -41,4 +33,44 @@
 }
 .errorMessage {
   color: var(--red);
+}
+
+h1 {
+  font-size: 2rem;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #dfd7a0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container img {
+  width: 95%;
+}
+
+.col {
+  margin: 1%;
+  flex: auto;
+}
+.display {
+  background-color: #dfd7a0;
+  border: 1px solid #de9d35;
+  border-radius: 1px;
+  height: auto;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 75%;
+  height: 24.5pt;
+  font-size: 21.5pt;
+  overflow-x: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.duck-table-row {
+  display: flex;
+  flex-direction: row;
 }
