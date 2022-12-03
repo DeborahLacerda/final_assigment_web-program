@@ -29,10 +29,21 @@ function populatesection(obj) {
 function populateDucks(ducks) {
   const section = document.querySelector(".container");
 
+  const header = document.createElement("div");
+  header.className = "duck-table-row";
+
+  addTextColumn(header, "Item", "item");
+  addTextColumn(header, "Value", "value");
+  addTextColumn(header, "Amount", "amount");
+  addTextColumn(header, "Subtotal", "sub-total");
+
+  section.appendChild(header);
+
   for (const duck of ducks) {
     const rowId = `duck-in-a-row-${duck.id}`;
     const duckRow = document.createElement("div");
-    duckRow.className = "duck-table-row";
+
+    duckRow.className = "table-row";
     duckRow.id = rowId;
 
     const itemColumn = document.createElement("div");
@@ -60,7 +71,7 @@ function populateDucks(ducks) {
     itemColumn.appendChild(img);
     duckRow.appendChild(itemColumn);
 
-    addTextColumn(duckRow, duck.value);
+    addTextColumn(duckRow, duck.value, "value");
     addTextColumn(duckRow, 0, "amount");
     addTextColumn(duckRow, 0, "sub-total");
 
