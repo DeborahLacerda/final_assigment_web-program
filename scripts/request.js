@@ -43,13 +43,13 @@ function populateDucks(ducks) {
     const rowId = `duck-in-a-row-${duck.id}`;
     const duckRow = document.createElement("div");
 
-    duckRow.className = "table-row";
+    duckRow.className = "duck-table-row";
     duckRow.id = rowId;
 
     const itemColumn = document.createElement("div");
+    itemColumn.className = "item";
     const img = document.createElement("img");
     img.src = duck.img;
-    img.className = "col";
 
     // fazendo a conta  olha o evento
     img.addEventListener("click", function () {
