@@ -3,13 +3,10 @@
 
 //validate module
 function validateProfile(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
-  //duckName
   validateDName();
-  //size
   validateQuantity();
-
   validateDate();
   validateColor();
   validateEye();
@@ -19,26 +16,26 @@ function validateProfile(e) {
 
 function validateDName() {
   const textbox = document.getElementById("dname");
-  if (textbox.value.length <= 10 && textbox.value.length >= 5) {
+  if (textbox.value.length <= 10 && textbox.value.length >= 2) {
   } else if (dname.value === "") {
     document.querySelector("#dnameError").textContent =
-      "*Please make sure the Name is between 5-10 characters long*";
+      "*Please make sure the Name is between 2-10 characters long*";
   }
   document.querySelector("#dnameError").textContent =
-    "*Please make sure the Name is between 5-10 characters long*";
+    "*Please make sure the Name is between 2-10 characters long*";
 }
 
 ///b) Number (min and max of your choice)
 
 function validateQuantity() {
   const textbox = document.getElementById("quantity");
-  if (textbox.value <= 10 && textbox.value >= 5) {
+  if (textbox.value <= 10 && textbox.value >= 2) {
   } else if (quantity.value === "") {
     document.querySelector("#quantityError").textContent =
-      "*Please enter a quantity between 5 and 10.*";
+      "*Please enter a quantity between 2 and 10.*";
   } else {
     document.querySelector("#quantityError").textContent =
-      "*Please enter a quantity between 5 and 10.*";
+      "*Please enter a quantity between 2 and 10.*";
   }
 }
 

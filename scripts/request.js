@@ -66,13 +66,27 @@ function populateDucks(ducks) {
       const subtotalCol = duckRow.querySelector(".sub-total");
       subtotal = amount * duck.value;
       subtotalCol.innerText = subtotal;
+
+      const amountCol1 = duckRow.querySelector(".amount1");
+      let amount1 = parseInt(amountCol1.value);
+      amount1 += 1;
+      amountCol1.value = amount1;
     });
 
     itemColumn.appendChild(img);
     duckRow.appendChild(itemColumn);
 
     addTextColumn(duckRow, duck.value, "value");
+
     addTextColumn(duckRow, 0, "amount");
+
+    const column = document.createElement("input");
+    column.setAttribute("type", "hidden");
+    column.className = "amount1";
+    column.name = "amount" + rowId;
+    column.value = 0;
+    duckRow.appendChild(column);
+
     addTextColumn(duckRow, 0, "sub-total");
 
     section.appendChild(duckRow);
@@ -81,10 +95,8 @@ function populateDucks(ducks) {
 
 function addTextColumn(container, text, columnClass) {
   const column = document.createElement("div");
-
   column.className = columnClass;
   column.innerText = text;
-
   container.appendChild(column);
 }
 

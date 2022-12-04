@@ -20,7 +20,12 @@
         How about a special duck? Choose the main features. Required fields are
         followed by <span aria-label="required">*</span>.
       </p>
-      <form name="profile" id="profileForm">
+      <form
+        name="profile"
+        id="profileForm"
+        action="./summary.html"
+        method="get"
+      >
         <fieldset>
           <legend>Special Ducks:</legend>
 
@@ -31,13 +36,15 @@
           </div>
 
           <div>
-            <label for="quantity">Minimum quantity 5 and maximum 10</label>
+            <label for="quantity">Quantity</label>
+
             <input
               tabindex="2"
               type="number"
               id="quantity"
               name="quantity"
               value=""
+              placeholder="min-2 and max-10"
             />
             <span class="errorMessage" id="quantityError"></span>
           </div>
@@ -48,10 +55,10 @@
           </div>
 
           <div>
-            <label for="username"
+            <label for="color"
               >Color: <span aria-label="required">*</span></label
             >
-            <input type="text" id="color" list="colours" />
+            <input type="text" id="color" name="color" list="colours" />
             <datalist id="colours">
               <option value="Yellow" data-id="1"></option>
               <option value="Blue" data-id="2"></option>
@@ -93,11 +100,11 @@
 
         <input class="btn" type="submit" value="Submit" />
         <input class="btn" type="reset" />
+
+        <section class="top"></section>
+
+        <section class="container"></section>
       </form>
-
-      <section class="top"></section>
-
-      <section class="container"></section>
     </main>
     <script src="/scripts/validate.js"></script>
     <script src="/scripts/events.js"></script>
