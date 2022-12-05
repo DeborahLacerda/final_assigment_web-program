@@ -18,9 +18,7 @@ function validateProfile() {
   const isColorValid = validateColor();
   const isEyeValid = validateEye();
 
-  return (
-    isNameValid && isQuantityValid && isDateValid && isColorValid && isEyeValid
-  );
+  return isColorValid && isEyeValid;
 }
 
 ///a) Text (min and max length)
