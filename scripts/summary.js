@@ -4,6 +4,7 @@ const obj = {
   Quantity: url.searchParams.get("quantity"),
   Date: url.searchParams.get("date"),
   Color: url.searchParams.get("color"),
+  Gift_Wrapping: url.searchParams.get("gif"),
   Duck_Eyes: url.searchParams.get("eyes"),
   amount1: url.searchParams.get("amountduck-in-a-row-1"),
   amount2: url.searchParams.get("amountduck-in-a-row-2"),
@@ -35,7 +36,10 @@ function populatesection(obj) {
   listItem3.textContent = "Color: " + obj.Color;
 
   const listItem4 = document.createElement("li");
-  listItem4.textContent = "Duck Eyes: " + obj.Duck_Eyes;
+  listItem4.textContent = "Gift Wrapping: " + obj.Gift_Wrapping;
+
+  const listItem5 = document.createElement("li");
+  listItem5.textContent = "Duck Eyes: " + obj.Duck_Eyes;
 
   section.appendChild(req2);
   section.appendChild(myList);
@@ -44,6 +48,7 @@ function populatesection(obj) {
   myList.appendChild(listItem2);
   myList.appendChild(listItem3);
   myList.appendChild(listItem4);
+  myList.appendChild(listItem5);
 
   const req4 = document.createElement("h2");
   req4.textContent = "Result Q4";
