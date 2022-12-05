@@ -92,3 +92,33 @@ h1 {
 .sub-total {
   width: 23%;
 }
+
+nav,
+nav a {
+  font-family: Arial;
+  background-color: #de9d35;
+  color: wheat;
+  font-size: 16pt;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  text-align: center;
+  padding: 5px 25px;
+  text-decoration: none;
+  float: left;
+  font-size: 13pt;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}

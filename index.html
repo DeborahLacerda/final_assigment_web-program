@@ -12,7 +12,17 @@
   </head>
 
   <body>
-    <header>Form</header>
+    <header>
+      <div class="nav">
+        <h1 class="text">Form</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="summary.html">Summary</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <p>This are the Ducks</p>
@@ -58,7 +68,13 @@
             <label for="color"
               >Color: <span aria-label="required">*</span></label
             >
-            <input type="text" id="color" name="color" list="colours" tabindex="3"/>
+            <input
+              type="text"
+              id="color"
+              name="color"
+              list="colours"
+              tabindex="3"
+            />
             <datalist id="colours">
               <option value="Yellow" data-id="1"></option>
               <option value="Blue" data-id="2"></option>
@@ -71,27 +87,25 @@
           <div>
             <span class="errorMessage" id="colorError"></span>
           </div>
-                <label for="mon">Gift Wrapping</label>
-                <input
-                  tabindex="4"
-                  type="checkbox"
-                  id="1"
-                  name="gif"
-                  value="Yes"
-                />
-                <span class="errorMessage" id="gifError"></span>
-
-              </div>
+          <div>
+            <label for="mon">Gift Wrapping</label>
+            <input tabindex="4" type="checkbox" id="1" name="gif" value="Yes" />
+            <span class="errorMessage" id="gifError"></span>
+          </div>
 
           <div>
             <legend>Duck Eyes <span aria-label="required">*</span></legend>
             <label for="lashes"
-              ><input type="radio" name="eyes" id="lashes" value="lashes" tabindex="5"/>With
-              lashes
+              ><input
+                type="radio"
+                name="eyes"
+                id="lashes"
+                value="lashes"
+                tabindex="5"
+              />With lashes
             </label>
             <label for="nlashes"
               ><input
-              
                 type="radio"
                 name="eyes"
                 id="nlashes"
@@ -111,7 +125,7 @@
 
         <input type="number" readonly class="display" value="0" id="total" />
 
-        <input class="btn" type="submit" value="Submit" tabindex="6"/>
+        <input class="btn" type="submit" value="Submit" tabindex="6" />
         <input class="btn" type="reset" />
 
         <section class="top"></section>
